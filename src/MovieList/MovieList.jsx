@@ -1,4 +1,4 @@
-
+import './MovieList.css'
 
 const MovieList = (props) => {
   return ( 
