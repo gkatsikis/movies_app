@@ -7,21 +7,25 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 // Components
 import MovieList from './MovieList/MovieList';
+import MovieListHeading from './MovieListHeading/MovieListHeading';
+import SearchBox from './SearchBox/SearchBox';
 
 function App() {
 
-  const [movies, setMovies] = useState([
-    {
-      "Title": "Avengers: Endgame",
-      "Year": "2019",
-      "imdbID": "tt4154796",
-      "Type": "movie",
-      "Poster": "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg"
-  },
-  ])
+  const [movies, setMovies] = useState([])
+  const [searchValue, setSearchValue] = useState('')
 
   return (
     <div className="container-fluid movie-app">
+      <div className="row d-flex align-items-center mt-4 mb-4">
+        <MovieListHeading 
+          heading="Movies"
+        />
+        <SearchBox 
+          searchValue={searchValue}
+          setSearchValue={setSearchValue} 
+        />
+      </div>
       <div className="row">
         <MovieList
           movies={movies}
