@@ -1,4 +1,4 @@
-body {
+* {
   background-color: #141414;
   color: #ffffff;
 }
@@ -16,5 +16,13 @@ body {
 .image-container:hover {
   cursor: pointer;
   transform: sacale(1.1);
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay {
+  
 }
 
