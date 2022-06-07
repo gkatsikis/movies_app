@@ -9,8 +9,12 @@
 }
 
 .image-container {
+  display: flex;
+  justify-content: center;
   position: relative;
   transition: transform 0.2s;
+  border: 1px solid red;
+  /* margin-right: -700px; */
 }
 
 .image-container:hover {
